@@ -3,22 +3,22 @@
  */
 
 exports.raise_error = function (err, message) {
-	var error = new Error(message);
-	error.code = err; 
+    var error = new Error(message);
+    error.code = err; 
 
-	return error; 
+    return error; 
 }
 
 exports.no_such_dockerfile_DIR = function (path) {
-	var error = { error: "no_such_dockerfile_directory",
-				  message: `The specified directory <${path}> does not exist`};
-	return error;
+    var error = { error: "no_such_dockerfile_directory",
+                  message: `The specified directory <${path}> does not exist`};
+    return error;
 }
 
 exports.invalid_resource = function (resource) {
-	var error = { error: "invalid_resource",
-				  message: `The specified resource <${resource}> does not exist`};
-	return error;
+    var error = { error: "invalid_resource",
+                  message: `The specified resource <${resource}> does not exist`};
+    return error;
 }
 
 // 
